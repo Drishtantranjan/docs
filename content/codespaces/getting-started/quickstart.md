@@ -1,103 +1,330 @@
----
-title: Quickstart for Codespaces
-intro: 'Try out {% data variables.product.prodname_codespaces %} in 5 minutes.'
-allowTitleToDifferFromFilename: true
-product: '{% data reusables.gated-features.codespaces %}'
-versions:
-  fpt: '*'
-  ghec: '*'
-type: quick_start
-topics:
-  - Codespaces
-redirect_from:
-  - /codespaces/codespaces-quickstart
----
+#include <stdio.h>
+#include <string.h>
+void MUR_861(int a);
+void VAR_862(int b);
+void VIN_863(int c);
+void ANJ_864(int d);
+void AAN_865(int e);
+void ARU_866(int f);
+int main()
 
-## Introduction
+{ int age,res,res1,n,A,B,C,D;
+  float height, weight, bmi;
+char name,allergy;
+char str[4]="YES";//to see if string matches or not
+char str1[4];//entered string for allergy
+char str2[4];//existing user or not
+char str3[4];//for UID
+printf("Are you an existing user? YES or NO\n");
+scanf("%s",str2);
+res1=strcmp(str,str2);
+if(res1==1){
+    printf("Enter the user name\n");
+    scanf("%s",&name);
+    printf("Enter you age\n");
+    scanf("%d",&age);
+     printf("Do you have known allergy:YES or NO?(enter in the given format)\n ");
+  scanf("%s",str1);
+ res=strcmp(str,str1);
+ if(res==0)
+ {      printf("Enter your known allergy\n ");
+       scanf("\n%s",&allergy);
+ }
+}
+ else if(res1==0){
+     printf("Enter UID");
+     scanf("%d",&n );
+     if(n==861){
+     MUR_861(861);
+         }
+         else if(n==862){
+             VAR_862(862);
+         }
+         else if(n==863){
+             VIN_863(863);
+         }
+         else if(n==864){
+             ANJ_864(864);
+         }
+         else if(n==865){
+             AAN_865(865);
+         }
+         else if(n==866){
+             ARU_866(866);
+         }
+    
+ }
+ else{
+       
+    printf("Enter height in meter\n");  
+    scanf("%f", &height);  
+    printf("Enter weight in kg\n");  
+    scanf("%f", &weight);  
+  
+    bmi = weight / (height * height);  
+  
+    printf("Your Body Mass Index(BMI) is %f\n", bmi);  
+  
+    if(bmi < 15)  
+    {  
+        printf("Your BMI category is: Starvation\n");  
+    }  
+    else if(bmi >= 15.1 && bmi <= 17.5)  
+    {  
+        printf("Your BMI category is: Anorexic\n");  
+    }  
+    else if(bmi >= 17.6 && bmi <= 18.5)  
+    {  
+        printf("Your BMI category is: Underweight\n");  
+    }  
+    else if(bmi >= 18.6 && bmi <= 24.9)  
+    {  
+        printf("Your BMI category is: Ideal\n");  
+    }  
+    else if(bmi >= 25 && bmi <= 25.9)  
+    {  
+        printf("Your BMI category is: Overweight\n");  
+    }  
+    else if(bmi >= 30 && bmi <= 30.9)  
+    {  
+        printf("Your BMI category is: Obese\n");  
+    }  
+    else if(bmi >= 40)  
+    {  
+        printf("Your BMI category is: Morbidly Obese\n");  
+    }  
+    else if(bmi<0)
+    {  
+        printf("Wrong entry\n");  
+    } 
+    else {
+      printf("1.Polyuria\n2.Hunger\n3.Blurry vision\n");
+    printf("\n4.Runny nose\n5.Sore throat\n6.Mild fever\n");
+    printf("\n7.Thickened mucus\n8.Lethargy\n9.Laboured breathing\n");
+     printf("\n10.Fatigue\n11.Blood and Mucus in cough\n12.Chest pain\n");
+     printf("\n13.Irregular fever\n14.Sweating\n15.High fever\n");
+     printf("\n16.Fever\n17.Shivering\n18.Yellow skin\n");
+     printf("\n19.Vomiting\n20.Stomach pain\n21.Dehydration\n");
+    printf("\n22.Hot and Cold flashes\n23.Headache\n24.Muscle pain\n");
+ }
+ 
+  
+    
+    
 
-In this guide, you'll create a codespace from a [template repository](https://github.com/2percentsilk/haikus-for-codespaces) and explore some of the essential features available to you within the codespace.
+printf("Enter the numbers of the symptoms you are suffering from\n");
+                                                    //taking input of symptoms from the user
+  int a,b,c;
+  scanf("%d%d%d",&a,&b,&c);
+  if(a==13&&b==14){
+      printf("Typhoid\n");
+      printf("Tablets advised for typhoid: TCV,ofl-OZ,Ceriplus\n");
+  
+  }
+  else if(b==14&&c==15){
+      printf("Typhoid\n");
+       printf("Tablets advised for typhoid: TCV,ofl-OZ,Ceriplus\n");
+      
+  }
+  else if(a==13&&c==15){
+      printf("Typhoid\n");
+       printf("Tablets advised for typhoid: TCV,ofl-OZ,Ceriplus\n");
+  }
+  else if(a==13&&b==14&&c==15){
+      printf("Typhoid\n");
+       printf("Tablets advised for typhoid: TCV,ofl-OZ,Ceriplus\n");
+  }
+ 
+ else if(a==1&&b==2){
+      printf("Diabetes\n");
+  printf("Tablets advised for Diabetes: TCV,ofl-OZ,Ceriplus\n");
+  }
+  else if(b==2&&c==3){
+      printf("Diabetes\n");
+       printf("Tablets advised for Diabetes: TCV,ofl-OZ,Ceriplus\n");
 
-From this quickstart, you will learn how to create a codespace, connect to a forwarded port to view your running application, use version control in a codespace, and personalize your setup with extensions.
+  }
+  else if(a==1&&c==3){
+      printf("Diabetes\n");
+  
+       printf("Tablets advised for Diabetes: TCV,ofl-OZ,Ceriplus\n");
 
-For more information on exactly how {% data variables.product.prodname_codespaces %} works, see the companion guide "[Deep dive into {% data variables.product.prodname_codespaces %}](/codespaces/getting-started/deep-dive)."
+  }
+  else if(a==1&&b==2&&c==3){
+      printf("Diabetes\n");
+  printf("Tablets advised for Diabetes: TCV,ofl-OZ,Ceriplus\n");
 
-## Creating your codespace
-
-1. Navigate to the [template repository](https://github.com/2percentsilk/haikus-for-codespaces) and select **Use this template**. 
-
-2. Name your repository, select your preferred privacy setting, and click **Create repository from this template**.
-
-3. Navigate to the main page of the newly created repository. Under the repository name, use the **{% octicon "code" aria-label="The code icon" %} Code** drop-down menu, and in the **Codespaces** tab, click {% octicon "plus" aria-label="The plus icon" %} **New codespace**.
-
-  ![New codespace button](/assets/images/help/codespaces/new-codespace-button.png)
-
-## Running the application
-
-Once your codespace is created, your repository will be automatically cloned into it. Now you can run the application and launch it in a browser.
-
-1. Since this example uses a Node.js project, start the application by entering `npm run dev` in the terminal. This command executes the `dev` script in the package.json file and starts up the web application defined in the sample repository.
-   
-   ![npm run dev in terminal](/assets/images/help/codespaces/codespaces-npm-run-dev.png)
-
-    If you're following along with a different application type, enter the corresponding start command for that project.
-
-2. When your application starts, the codespace recognizes the port the application is running on and displays a prompt to forward that port so you can connect to it. 
-
-  ![Port forwarding toast](/assets/images/help/codespaces/quickstart-port-toast.png)
-
-3. Click **Open in Browser** to view your running application in a new tab.
-
-## Edit the application and view changes
-
-1. Switch back to your codespace and open the `haikus.json` file by double-clicking it in the File Explorer.
-
-2. Edit the `text` field of the first haiku to personalize the application with your own haiku.
-
-3. Go back to the running application tab in your browser and refresh to see your changes.
-   
-  {% octicon "light-bulb" aria-label="The lightbulb icon" %}  If you've closed the tab, open the Ports panel and click the **Open in browser** icon for the running port.
-  ![Port Forwarding Panel](/assets/images/help/codespaces/quickstart-forward-port.png)
-
-## Committing and pushing your changes
-
-Now that you've made a few changes, you can use the integrated terminal or the source view to commit and push the changes back to the remote.
-
-{% data reusables.codespaces.source-control-display-dark %}
-1. To stage your changes, click  **+** next to the file you've changed, or next to **Changes** if you've changed multiple files and you want to stage them all.
-![Source control side bar with staging button highlighted](/assets/images/help/codespaces/codespaces-commit-stage.png)
-1. Type a commit message describing the change you've made.
-![Source control side bar with a commit message](/assets/images/help/codespaces/codespaces-commit-commit-message.png)  
-1. To commit your staged changes, click the check mark at the top the source control side bar.
-![Click the check mark icon](/assets/images/help/codespaces/codespaces-commit-checkmark-icon.png)  
-    You can push the changes you've made. This applies those changes to the upstream branch on the remote repository. You might want to do this if you're not yet ready to create a pull request, or if you prefer to create a pull request on {% data variables.product.prodname_dotcom %}.
-1. At the top of the side bar, click the ellipsis (**...**).
-![Ellipsis button for View and More Actions](/assets/images/help/codespaces/source-control-ellipsis-button-nochanges.png)
-1. In the drop-down menu, click **Push**.
-
-## Personalizing with an extension
-
-Within a codespace, you have access to the Visual Studio Code Marketplace. For this example, you'll install an extension that alters the theme, but you can install any extension that is useful for your workflow.
-
-1. In the left sidebar, click the Extensions icon.
-
-2.  In the search bar, enter `fairyfloss` and install the fairyfloss extension.
-
-  ![Add an extension](/assets/images/help/codespaces/add-extension.png)
-
-3. Select the `fairyfloss` theme by selecting it from the list.
-
-  ![Select the fairyfloss theme](/assets/images/help/codespaces/fairyfloss.png)
-
-4. Changes you make to your editor setup in the current codespace, such as theme and keyboard bindings, are synced automatically via [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) to any other codespaces you open and any instances of Visual Studio Code that are signed into your GitHub account.
-
-## Next Steps
-
-You've successfully created, personalized, and run your first application within a codespace but there's so much more to explore! Here are some helpful resources for taking your next steps with {% data variables.product.prodname_codespaces %}.
-  - [Deep dive](/codespaces/getting-started/deep-dive): This quickstart presented some of the features of {% data variables.product.prodname_codespaces %}. The deep dive looks at these areas from a technical standpoint.
-  - [Setting up your project for {% data variables.product.prodname_codespaces %}](/codespaces/getting-started-with-codespaces): These guides provide information on setting up your project to use {% data variables.product.prodname_codespaces %} with specific languages.
-  - [Configuring {% data variables.product.prodname_codespaces %} for your project](/codespaces/setting-up-your-codespace/configuring-codespaces-for-your-project): This guide provides details on creating a custom configuration for {% data variables.product.prodname_codespaces %} for your project.
-
-## Further reading
-
-- [Enabling {% data variables.product.prodname_codespaces %} for your organization](/codespaces/managing-codespaces-for-your-organization/enabling-codespaces-for-your-organization)
-- [Managing billing for {% data variables.product.prodname_codespaces %} in your organization](/codespaces/managing-codespaces-for-your-organization/managing-billing-for-codespaces-in-your-organization)
+  }
+   else if(a==4&&b==5){
+      printf("Common cold\n");
+   printf("Tablets advised for Common cold: Tavist, Vicks, Robafase\n");
+  }
+  else if(b==5&&c==6){
+      printf("Common cold\n");
+      printf("Tablets advised for Common cold: Tavist, Vicks, Robafase\n");
+      
+  }
+  else if(a==4&&c==6){
+      printf("Common cold\n");
+      printf("Tablets advised for Common cold: Tavist, Vicks, Robafase\n");
+  }
+  else if(a==4&&b==5&&c==6){
+      printf("Common cold\n");
+      printf("Tablets advised for Common cold: Tavist, Vicks, Robafase\n");
+  }
+  
+   else if(a==7&&b==8){
+      printf("Bronchitis\n");
+   printf("Tablets advised for Bronchitis: Robitussium, Bhronconu, Tyelenol\n");
+  }
+  else if(b==8&&c==9){
+      printf("Bronchitis\n");
+      printf("Tablets advised for Bronchitis: Robitussium, Bhronconu, Tyelenol\n");
+      
+  }
+  else if(a==1&&c==9){
+      printf("Bronchitis\n");
+      printf("Tablets advised for Bronchitis: Robitussium, Bhronconu, Tyelenol\n");
+  }
+  else if(a==7&&b==8&&c==9){
+      printf("Bronchitis\n");
+      printf("Tablets advised for Bronchitis: Robitussium, Bhronconu, Tyelenol\n");
+  }
+      else if(a==10&&b==11){
+      printf("Tuberculosis\n");
+      printf("Tablets advised for Tuberculosis: Rifampin capsule, Ethambutol, Penicilllin\n");
+  
+  }
+  else if(b==11&&c==12){
+      printf("Tuberculosis\n");
+      printf("Tablets advised for Tuberculosis: Rifampin capsule, Ethambutol, Penicilllin\n");
+  }
+  else if(a==10&&c==12){
+      printf("Tuberculosis\n");
+      printf("Tablets advised for Tuberculosis: Rifampin capsule, Ethambutol, Penicilllin\n");
+  }
+  else if(a==10&&b==11&&c==12){
+      printf("Tuberculosis\n");
+      printf("Tablets advised for Tuberculosis: Rifampin capsule, Ethambutol, Penicilllin\n");
+  }
+        else if(a==16&&b==17){
+      printf("Cholera\n");
+      printf("Tablets advised for Cholera: Evichol, Shanchol, Anti-Hog cholorer serum\n");
+  
+  }
+  else if(b==17&&c==18){
+      printf("Cholera\n");
+      printf("Tablets advised for Cholera: Evichol, Shanchol, Anti-Hog cholorer serum\n");
+      
+  }
+  else if(a==16&&c==18){
+      printf("Cholera\n");
+      printf("Tablets advised for Cholera: Evichol, Shanchol, Anti-Hog cholorer serum\n");
+  }
+  else if(a==16&&b==17&&c==18){
+      printf("Cholera\n");
+      printf("Tablets advised for Cholera: Evichol, Shanchol, Anti-Hog cholorer serum\n");
+  }
+          else if(a==19&&b==20){
+      printf("Dysentry\n");
+      printf("Tablets advised for Dysentry: Diasyl, NORflox acim, Gluconil\n");
+  
+  }
+  else if(b==20&&c==21){
+      printf("Dysentry\n");
+       printf("Tablets advised for Dysentry: Diasyl, NORflox acim, Gluconil\n");
+      
+  }
+  else if(a==19&&c==21){
+      printf("Dysentry\n");
+       printf("Tablets advised for Dysentry: Diasyl, NORflox acim, Gluconil\n");
+  }
+  else if(a==19&&b==20&&c==21){
+      printf("Dysentry\n");
+       printf("Tablets advised for Dysentry: Diasyl, NORflox acim, Gluconil\n");
+  }
+            else if(a==22&&b==23){
+      printf("Malaria\n");
+       printf("Tablets advised for Malaria: Chloroquil, Quinestor, Morphin\n");
+  
+  }
+  else if(b==23&&c==24){
+      printf("Malaria\n");
+      printf("Tablets advised for Malaria: Chloroquil, Quinestor, Morphin\n");
+  }
+  else if(a==22&&c==24){
+      printf("Malaria\n");
+      printf("Tablets advised for Malaria: Chloroquil, Quinestor, Morphin\n");
+  }
+  else if(a==22&&b==23&&c==24){
+      printf("Malaria\n");
+      printf("Tablets advised for Malaria: Chloroquil, Quinestor, Morphin\n");
+  }
+  else{
+      printf("\nThe symptoms mentioned are very close to other diseases, kindly refer to a doctor.\n");
+  }
+  }
+    return 0;  
+}
+void MUR_861(int a)
+{
+    printf("\nName of the patient:Murnal\n" );
+    printf("\nAge:20\n" );
+    printf("\nGender:Female\n" );
+    printf("\nBlood group:O+\n" );
+    printf("\nPrevious treatment record\n" );
+    printf("\nSuffered from Thyphoid from 10/11/2005 to 09/12/2005\n");
+    printf("\nTreated by: Dr.Radha\n" );
+    printf("\nAllergies:Sulfa drugs \n" );
+    
+}
+void VAR_862(int b){
+    printf("\nName of the patient:Varun\n" );
+    printf("\nAge:23\n" );
+    printf("\nGender:M\n" );
+    printf("\nBlood group:AB+\n" );
+    printf("\nPrevious treatment record:\n" );
+    printf("\nSuffered from Tuberculosis from 6/05/2019 to 23/12/2020\n ");
+    printf("\nTreated by: Dr. Anjali\n" );
+    printf("\nAllergies:No allergies\n" );
+}
+void VIN_863(int c){
+    printf("\nName of the patient:Vinod\n" );
+    printf("\nAge:17\n" );
+    printf("\nGender:M\n" );
+    printf("\nBlood group:B+\n" );
+    printf("\nPrevious treatment record:\n" );
+    printf("\nSuffered from Dengue from 16/07/2017 to 30/07/2017\n ");
+    printf("\nTreated by: Dr. Bose\n" );
+    printf("\nAllergies: Skin Rashes from Aspirin\n" );
+}
+void ANJ_864(int d){
+    printf("\nName of the patient:ANJALI\n" );
+    printf("\nAge:19\n" );
+    printf("\nGender:Female\n" );
+    printf("\nBlood group:B+\n" );
+    printf("\nPrevious treatment record\n" );
+    printf("\nSuffered from Malaria from 10/11/2005 to 15/12/2005\n");
+    printf("\nTreated by: Dr.Radha\n" );
+    printf("\nAllergies:Irritation from Penicillin tablets\n" );
+}
+void AAN_865(int e){
+    printf("\nName of the patient:AANYA\n" );
+    printf("\nAge:45\n" );
+    printf("\nGender:Female\n" );
+    printf("\nBlood group:A+\n" );
+    printf("\nPrevious treatment record\n" );
+    printf("\nSuffered from Diarrhea from 10/11/2005 to 15/11/2005\n");
+    printf("\nTreated by: Dr.Radha\n" );
+    printf("\nAllergies:Irritation from Penicillin \n" );
+}
+void ARU_866(int f){
+    printf("\nName of the patient:Arun\n" );
+    printf("\nAge:30\n" );
+    printf("\nGender:M\n" );
+    printf("\nBlood group:A+\n" );
+    printf("\nPrevious treatment record:\n" );
+    printf("\nSuffered from Cholera from 13/04/2018 to 19/04/2018\n ");
+    printf("\nTreated by: Dr. Reddy\n" );
+    printf("\nAllergies: Swelling and joint aches from Morphine tablets\n" );
+}
